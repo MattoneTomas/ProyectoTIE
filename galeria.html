@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c93d725069.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.2.0-beta.2/dist/photoswipe.css">
+    <link rel="stylesheet" href="./photoswipe-dynamic-caption-plugin.css">
+
+
+
+
+
+    <link rel="stylesheet" href="plantilla.css">
+    <link rel="icon" href="Imagenes/LogoCopaTieIcono.png" type="image/icon type";>
+    <title>TIE.TV</title>
+</head>
+<body>
+   
+    <nav class="menu">
+        
+        <ul class="logo">
+            <a href="index.html">
+            <img src="Imagenes/LogoCopaTie-removebg-preview.png" alt="">
+            </a>
+            </ul>
+
+        <ul class="itemsMenu">
+            <li class="home"><a href="index.html">Home</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="equipos.html">Equipos</a></li>
+            <li><a href="clips.html">Clips</a></li>
+            <li><a href="torneos.html">Torneos</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="redes.html">Redes</a></li>
+                 
+                   
+                    
+        </ul>
+
+        <ul class="login">
+            
+         
+            <li class="login"><a href="login.html">Iniciar Sesion</a></li>
+            
+         </ul>
+      
+        
+        
+        <span class="botonMenu">
+            <i class="fa-solid fa-bars"></i>
+        </span>
+
+     
+
+    </nav>
+
+
+
+    <div class="bloqueCentral">
+        <div class="texto">
+            <br><br><br><br>
+            <img src="Imagenes/letrasTieNegro.png" alt="" class="center">
+            <br>
+            <hr >
+        </div>
+        <br>
+        <h1 align="center">Galeria de imagenes</h1>
+        <br>
+        <div class="plugin">
+            <div class="pswp-gallery" id="gallery" align="center">
+                <div class="pswp-gallery__item" >
+                    <a  
+                        href="https://www.coolmathgames.com/sites/default/files/worlds-hardest-game_0.png" 
+                        data-pswp-width="3000" 
+                        data-pswp-height="2500" 
+                        target="_blank">
+                        <img width="300" height="300" src="https://www.coolmathgames.com/sites/default/files/worlds-hardest-game_0.png" alt="ESTE JUEGO ES RE DIFICIL MIRENLON" />
+                    </a>
+                </div>
+
+                <div class="pswp-gallery__item">
+                    <a  
+                      href="https://tr.rbxcdn.com/93c885290bcc3ba6654d723c31aeebcc/768/432/Image/Png" 
+                      data-pswp-width="3000" 
+                      data-pswp-height="2500" 
+                      target="_blank">
+                      <img width="300" height="300" src="https://tr.rbxcdn.com/93c885290bcc3ba6654d723c31aeebcc/768/432/Image/Png" alt="CONTER BLOX EL MEJOR VIDEOJUEGO DE DISPAROS" />
+                    </a>
+                </div>
+
+
+                <div class="pswp-caption-content"><b>Lorem ipsum dolor (1933)</b><br>Color photograph<br>12 x 10</div>
+            </div>
+            
+
+            <script type="module">
+                import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@beta/dist/photoswipe-lightbox.esm.js';
+                import PhotoSwipeDynamicCaption from './photoswipe-dynamic-caption-plugin.esm.js';
+          
+                const smallScreenPadding = {
+                  top: 0, bottom: 0, left: 0, right: 0
+                };
+                const largeScreenPadding = {
+                  top: 50, bottom: 0, left: 0, right: 0
+                };
+                const lightbox = new PhotoSwipeLightbox({
+                  gallerySelector: '#gallery',
+                  childSelector: '.pswp-gallery__item',
+                  // optionaly adjust viewport
+                  paddingFn: (viewportSize) => {
+                    return viewportSize.x < 700 ? smallScreenPadding : largeScreenPadding
+                  },
+                  pswpModule: () => import('https://unpkg.com/photoswipe@beta/dist/photoswipe.esm.js')
+                });
+          
+                const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+                  mobileLayoutBreakpoint: 700,
+                  type: 'auto',
+                  mobileCaptionOverlapRatio: 1
+                });
+          
+                lightbox.init();
+              </script>
+            
+        
+              
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <br><br>
+    </div>
+
+
+
+
+    
+    <div class="finalPagina" >
+            <ul class="imagenesTexto">
+                <img src="Imagenes/personitas.png" alt="">
+            </ul>
+        
+        
+            <ul class="opcionesFinal">
+                <li><a href=>Privacidad</a></li>
+                <li><a href="">Cookies</a></li>
+                <li><a href="">Terminos</a></li>
+                <li><a href="">Contacto</a></li>
+                    
+            </ul>
+    </div>
+    
+
+
+</body>
+</html>
